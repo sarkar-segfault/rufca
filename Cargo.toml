@@ -1,0 +1,17 @@
+[package]
+name = "rufca"
+edition = "2024"
+version = "1.0.0"
+authors = ["sarkar-segfault <adhritsarkar@proton.me>"]
+description = "Rust Flash Cards"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/sarkar-segfault/rufca"
+homepage = "https://crates.io/crates/rufca"
+documentation = "https://docs.rs/rufca"
+readme = "README.md"
+keywords = ["productivity", "cbor", "interactive", "education", "fun"]
+categories = ["command-line-utilities", "text-processing"]
+
+[dependencies]
+console = "0.16.3"
+dialoguer = { version = "0.12.0", default-features = false }
