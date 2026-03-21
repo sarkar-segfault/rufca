@@ -13,5 +13,5 @@ keywords = ["productivity", "cbor", "interactive", "education", "fun"]
 categories = ["command-line-utilities", "text-processing"]
 
 [dependencies]
-console = "0.16.3"
-dialoguer = { version = "0.12.0", default-features = false }
+clap = { version = "4.6.0", default-features = false, features = ["color", "help", "std", "usage", "derive"] }
+colored = { version = "3.1.1", features = ["no-color"] }
