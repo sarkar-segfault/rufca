@@ -9,11 +9,6 @@ pub struct Options {
 
 #[derive(Subcommand)]
 pub enum Command {
-    New {
-        #[arg(short, long)]
-        file: Option<String>,
-    },
-    Run {
-        file: Option<String>,
-    },
+    New { file: String },
+    Run { file: String },
 }
