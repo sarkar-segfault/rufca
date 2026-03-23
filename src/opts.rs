@@ -1,7 +1,7 @@
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
-#[command(name = "rufca", version, about, long_about = None)]
+#[command(name = "rufca", author, version, about)]
 pub struct Options {
     #[command(subcommand)]
     pub cmd: Command,
@@ -9,6 +9,15 @@ pub struct Options {
 
 #[derive(Subcommand)]
 pub enum Command {
-    New { file: String },
-    Run { file: String },
+    /// Creates a new flashcard set interactively
+    New {
+        /// The file to store the flashcards in
+        file: String,
+    },
+
+    /// Runs an existing flashcard set interactively
+    Run {
+        // The flashcard file to run
+        file: String,
+    },
 }
