@@ -1,4 +1,7 @@
+mod models;
+mod new;
 mod opts;
+
 use clap::Parser;
 
 fn main() {
