@@ -40,25 +40,25 @@ pub fn new(path: String) {
     let mut flashcards: Vec<FlashCard> = Vec::new();
     let mut total = 0u32;
 
-    while let Some(fc_q) = prompt("Flashcard question: ") {
-        let fc_a = match prompt("Flashcard answer: ") {
+    while let Some(question) = prompt("Flashcard question: ") {
+        let answer = match prompt("Flashcard answer: ") {
             Some(a) => a,
             None => break,
         };
 
-        let fc_w = match prompt("Flashcard weight: ") {
-            Some(w) => {
-                let x = w.parse::<u32>().unwrap_or(0);
-                total += x;
-                x
+        let weight = match prompt("Flashcard weight: ") {
+            Some(w_str) => {
+                let w = w_str.parse::<u32>().unwrap_or(0);
+                total += w;
+                w
             }
             None => 0,
         };
 
         flashcards.push(FlashCard {
-            text: fc_q,
-            answer: fc_a,
-            weight: fc_w,
+            question,
+            answer,
+            weight,
         });
     }
 
@@ -73,5 +73,6 @@ pub fn new(path: String) {
             total,
             flashcards: Some(flashcards),
         },
-    );
+    )
+    .expect("Failed to write to file");
 }

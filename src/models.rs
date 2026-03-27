@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
 pub struct FlashCard {
-    pub text: String,
+    pub question: String,
     pub answer: String,
     pub weight: u32,
 }
