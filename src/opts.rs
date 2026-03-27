@@ -1,7 +1,13 @@
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
-#[command(name = "rufca", author, version, about)]
+#[command(
+    name = "rufca",
+    author,
+    version,
+    about,
+    help_template = "{name} {version}\n{about}\n{author}\n\n{all-args}"
+)]
 pub struct Options {
     #[command(subcommand)]
     pub cmd: Command,
