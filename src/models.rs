@@ -12,5 +12,5 @@ pub struct FlashCardSet {
     pub name: Option<String>,
     pub author: Option<String>,
     pub total: u32,
-    pub flashcards: Option<Vec<FlashCard>>,
+    pub flashcards: Vec<FlashCard>,
 }

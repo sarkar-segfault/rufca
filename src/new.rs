@@ -71,7 +71,7 @@ pub fn new(path: String) {
             name,
             author,
             total,
-            flashcards: Some(flashcards),
+            flashcards: flashcards,
         },
     )
     .expect("Failed to write to file");
