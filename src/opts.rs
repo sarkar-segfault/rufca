@@ -6,7 +6,7 @@ use clap::{Parser, Subcommand};
     author,
     version,
     about,
-    help_template = "{name} {version}\n{about}\n{author}\n\n{all-args}"
+    help_template = "{name} {version}\n{about}\n{author}\nhttps://github.com/sarkar-segfault/rufca\n\n{all-args}"
 )]
 pub struct Options {
     #[command(subcommand)]
