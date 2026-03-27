@@ -1,6 +1,7 @@
 mod models;
 mod new;
 mod opts;
+mod run;
 
 use clap::Parser;
 
@@ -9,6 +10,6 @@ fn main() {
 
     match opts.cmd {
         opts::Command::New { file } => new::new(file),
-        opts::Command::Run { file } => println!("run {file:?}"),
+        opts::Command::Run { file } => run::run(file),
     }
 }
