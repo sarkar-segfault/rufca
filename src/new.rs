@@ -25,7 +25,7 @@ pub fn new(path: String) {
     );
     println!(
         "{}",
-        "You may skip the following inputs by sending EOF.".bright_black()
+        "You may skip the following inputs by sending EOF.\n".bright_black()
     );
 
     let name = prompt("What is the name of the new flashcard set? ");
@@ -33,14 +33,14 @@ pub fn new(path: String) {
 
     println!("\n{}", "Please create your flashcards.".green());
     println!(
-        "{}\n",
-        "You may stop creating flashcards by sending EOF".bright_black()
+        "{}",
+        "You may stop creating flashcards by sending EOF.".bright_black()
     );
 
     let mut flashcards: Vec<FlashCard> = Vec::new();
     let mut total = 0u32;
 
-    while let Some(question) = prompt("Flashcard question: ") {
+    while let Some(question) = prompt("\nFlashcard question: ") {
         let answer = match prompt("Flashcard answer: ") {
             Some(a) => a,
             None => break,
